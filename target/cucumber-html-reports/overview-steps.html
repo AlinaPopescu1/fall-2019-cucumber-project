@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber HTML Reports</td>
+        <td>1</td>
+      <td>02 May 2020, 18:22</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.cybertek.library.step_definitions.BooksTableStepDefs.books_table_should_contain_results_matching(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="10000">0.000</td>
+              <td class="duration" data-value="10000">0.000</td>
+              <td class="duration" data-value="10000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cybertek.library.step_definitions.BooksTableStepDefs.i_edit_the_book(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="15000">0.000</td>
+              <td class="duration" data-value="15000">0.000</td>
+              <td class="duration" data-value="15000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cybertek.library.step_definitions.BooksTableStepDefs.i_verify_book_information(com.cybertek.library.pojos.Book)</td>
+              <td>1</td>
+              <td class="duration" data-value="7000">0.000</td>
+              <td class="duration" data-value="7000">0.000</td>
+              <td class="duration" data-value="7000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cybertek.library.step_definitions.Hooks.connect()</td>
+              <td>2</td>
+              <td class="duration" data-value="37500">0.000</td>
+              <td class="duration" data-value="37500">0.000</td>
+              <td class="duration" data-value="75000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cybertek.library.step_definitions.Hooks.setUpScenario()</td>
+              <td>2</td>
+              <td class="duration" data-value="1694852000">1.694</td>
+              <td class="duration" data-value="1694852000">2.283</td>
+              <td class="duration" data-value="3389704000">3.389</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cybertek.library.step_definitions.Hooks.tearDownScenario(io.cucumber.java.Scenario)</td>
+              <td>2</td>
+              <td class="duration" data-value="672583500">0.672</td>
+              <td class="duration" data-value="672583500">0.734</td>
+              <td class="duration" data-value="1345167000">1.345</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cybertek.library.step_definitions.LoginStepDefs.i_am_on_the_login_page()</td>
+              <td>2</td>
+              <td class="duration" data-value="1003888500">1.003</td>
+              <td class="duration" data-value="1003888500">1.399</td>
+              <td class="duration" data-value="2007777000">2.007</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cybertek.library.step_definitions.LoginStepDefs.i_login_to_application_as_a(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="2726586500">2.726</td>
+              <td class="duration" data-value="2726586500">5.164</td>
+              <td class="duration" data-value="5453173000">5.453</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cybertek.library.step_definitions.PageNavigationStepDefs.i_go_to_page(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="10104298000">10.104</td>
+              <td class="duration" data-value="10104298000">10.113</td>
+              <td class="duration" data-value="20208596000">20.208</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cybertek.library.step_definitions.UsersTableStepDefs.i_search_for(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="28000">0.000</td>
+              <td class="duration" data-value="28000">0.000</td>
+              <td class="duration" data-value="28000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>10</td>
+            <td>16</td>
+            <td class="duration">2.025</td>
+            <td class="duration">20.208</td>
+            <td class="duration">32.404</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
