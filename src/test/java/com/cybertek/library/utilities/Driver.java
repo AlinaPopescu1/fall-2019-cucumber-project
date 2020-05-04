@@ -43,7 +43,7 @@ public class Driver {
                 case "remote-chrome":
                     chromeOptions = new ChromeOptions();
                     try {
-                        //mvn clean verify -DBROWSER=chrome
+
                         URL url = new URL("http://3.86.67.63:8081/wd/hub");
                         driverPool.set(new RemoteWebDriver(url, chromeOptions));
                     } catch (MalformedURLException e) {
