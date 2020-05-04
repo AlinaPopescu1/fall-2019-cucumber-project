@@ -44,7 +44,7 @@ public class Driver {
                     chromeOptions = new ChromeOptions();
                     try {
                         //mvn clean verify -DBROWSER=chrome
-                        URL url = new URL("http://34.203.215.182:4444/wd/hub");
+                        URL url = new URL("http://3.86.67.63:8081/wd/hub");
                         driverPool.set(new RemoteWebDriver(url, chromeOptions));
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
@@ -54,7 +54,7 @@ public class Driver {
                     firefoxOptions = new FirefoxOptions();
                     try {
                         //mvn verify -DBROWSER=firefox
-                        URL url = new URL("http://34.203.215.182:4444/wd/hub");
+                        URL url = new URL("http://3.86.67.63:8081/wd/hub");
                         driverPool.set(new RemoteWebDriver(url, firefoxOptions));
                     } catch (MalformedURLException e) {
                         e.printStackTrace();

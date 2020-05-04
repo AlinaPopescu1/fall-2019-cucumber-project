@@ -10,7 +10,6 @@ Background:
     When I search for "test"
     Then table should contain rows with "test"
 
-  @regression
     Scenario: Table columns names
       Then table should have following column names:
       | Actions   |

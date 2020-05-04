@@ -1,4 +1,4 @@
-@wip
+@regression
 Feature: Books table
 
 
@@ -17,7 +17,7 @@ Feature: Books table
     When I edit the book The kite runner
     Then I verify book information
       | name           | author          | year |
-      | Th kite runner | Khaled Hosseini | 2003 |
+      | The kite runner | Khaled Hosseini | 2003 |
 
 
 
